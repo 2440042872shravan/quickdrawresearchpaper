@@ -16,7 +16,7 @@ np.random.seed(32113)
 
 
 def to_prepare_data_esembler(df1,df2,df3,df4, lbl = 'word', countries=['US','BR','RU','KR'],\
-                   words=['USA','Brazil','Russia','Korea'],sample=30000, limit = 5000):
+                   words=['Airplane','ice cream','eyeglasses','baseball bat'],sample=30000, limit = 5000):
     
     # if running image recognition, 
     if lbl == 'word':
@@ -43,9 +43,13 @@ def to_prepare_data_esembler(df1,df2,df3,df4, lbl = 'word', countries=['US','BR'
       #runs _df_initial_fixer_cc for each word to prepare dataframe
         df_test1 = _df_initial_fixer_cc(df1,words[0])
         df_test2 = _df_initial_fixer_cc(df2,words[1])
+        df_test3 = _df_initial_fixer(df3,words[2],sample)
+        df_test4 = _df_initial_fixer(df4,words[3],sample)
         print(len(df_test1))
         print(len(df_test2))
-        new_df = pd.concat([df_test1,df_test2], axis =0)
+        print(len(df_test3))
+        print(len(df_test4))
+        new_df = pd.concat([df_test1,df_test2,df_test3,df_test4], axis =0)
         
         #filter dataframe by selected countries
         df_cf = new_df[(new_df['countrycode']==countries[0])|(new_df['countrycode']==countries[1])|\
