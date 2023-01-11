@@ -43,7 +43,7 @@ def ensemble_function_for_feature_engineering_(df,category,sample=30000,purpose=
     print("--- %s seconds ---" % (time.time() - time_to_start))
 
 #
-def The_feature_engineering__for_CNN(df,category,sample=60000,purpose='word',countries = ['US','BR','RU','KR']):
+def The_feature_engineering__for_CNN(df,category,sample=30000,purpose='word',countries = ['US','BR','RU','KR']):
     start_time = time.time()
     #runs CNN feature engineering functions
     df_1 = CNN_feat_eng_pt1(df)
