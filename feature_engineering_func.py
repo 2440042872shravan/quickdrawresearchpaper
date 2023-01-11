@@ -20,7 +20,7 @@ np.random.seed(32113)
 #df = pd.read_json(filepath, lines=True)
 
 # This is to esemble the country code
-def ensemble_function_for_feature_engineering_(df,category,sample=60000,purpose='word',\
+def ensemble_function_for_feature_engineering_(df,category,sample=30000,purpose='word',\
                                             countries = ['US','BR','RU','KR']):
     time_to_start = time.time()
     df_test1 = feature_eng_pt1(df)
