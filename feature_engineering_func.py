@@ -42,7 +42,7 @@ def ensemble_function_for_feature_engineering_(df,category,sample=30000,purpose=
     df_final.to_pickle("./data/MY_feature_{}.pkl".format(category)) 
     print("--- %s seconds ---" % (time.time() - time_to_start))
 
-#
+#Error. it might be from cnn feat 1 and cnn feat 2
 def The_feature_engineering__for_CNN(df,category,sample=30000,purpose='word',countries = ['US','BR','RU','KR']):
     start_time = time.time()
     #runs CNN feature engineering functions
